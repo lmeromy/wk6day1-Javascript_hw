@@ -56,7 +56,7 @@ console.log('Second Verdict: ', secondVerdict);
 
 // First verdict: "The murderer is Mrs. Peacock" b/c it is calling the declareMurderer function, and she is defined as the murderer within
 // Second verdict: "The murderer is Professor Plum" b/c lexical scope...Prof Plum as murderer is global
-
+// let is block-scoped to the function for declareMurderer
 // -----------------------------------
 // Episode 4
 
@@ -101,7 +101,8 @@ const verdict = declareWeapon();
 console.log(verdict);
 
 // OUTCOME: The weapon is the Revolver.
-// why? the change weapon function overwrote the weapon in scenario
+// why? the change weapon function overwrote the weapon
+// in scenario b/c things inside const objects can be changed!
 // -----------------------------------
 
 // Episode 6
@@ -161,7 +162,8 @@ console.log(verdict);
 
 // OUTCOME: The murderer is Mr. Green.
 // Without const or let or var, murderer = Mr. Green is now global
-
+// miss scarlett can be changed in terms of the plotTwist function,
+// but not further b/c let murderer is block-scoped to plotTwist!
 // -----------------------------------
 
 // Episode 8
@@ -221,8 +223,9 @@ const verdict = declareMurderer();
 console.log(verdict);
 
 // OUTCOME: The murderer is PRof Plum.
-// Why: The conditional statement was never actually called! so the murderer remains Prof Plum.
+// Why:  the let is scoped only to the if statement! so it wont change the global situation
+// so the murderer remains Prof Plum.
 
-// -----------------------------------
+
 // Extensions
 // Make up your own episode!
